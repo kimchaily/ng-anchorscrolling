@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+header nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background: #444;
+    &, a {
+        color: #ddd;
+    }
+    ul {
+        list-style: none;
+        padding: 10px 20px;
+
+        li {
+        	margin-bottom: 10px;
+        }
+    }
+}
+main section {
+    height: 50vh;
+    background: #dedede;
+    border: 1px solid #ccc;
+    margin-bottom: 6px;
+}
