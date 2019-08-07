@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent implements OnInit {
+  currentSection = 'eins';
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSectionChange(sectionId: string) {
+    this.currentSection = sectionId;
+  }
+
+  scrollTo(section) {
+    document.querySelector('#' + section)
+      .scrollIntoView();
+  }
 }

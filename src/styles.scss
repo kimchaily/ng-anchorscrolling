@@ -1,24 +1,31 @@
 header nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    background: #444;
-    &, a {
-        color: #ddd;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background: #444;
+  &,
+  a {
+    color: #ddd;
+    &.active {
+      color: red;
     }
-    ul {
-        list-style: none;
-        padding: 10px 20px;
+  }
+  ul {
+    list-style: none;
+    padding: 10px 20px;
 
-        li {
-        	margin-bottom: 10px;
-        }
+    li {
+      margin-bottom: 10px;
     }
+  }
 }
-main section {
+main {
+  section,
+  div {
     height: 50vh;
     background: #dedede;
     border: 1px solid #ccc;
     margin-bottom: 6px;
+  }
 }
