@@ -13,7 +13,7 @@
 	<div appScrollSpy [spiedTags]="['SECTION']" (sectionChange)="onSectionChange($event)">
 		<section id="eins">eins</section>
 		<section id="zwei">zwei</section>
-		<section id="drei">drei</section>
+		<section id="drei"><a [routerLink]="['/subzero']" routerLinkActive="router-link-active">drei</a></section>
 		<section id="vier">vier</section>
 
 	</div>

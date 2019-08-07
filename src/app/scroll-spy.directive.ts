@@ -1,4 +1,5 @@
 import { Directive, Injectable, Input, EventEmitter, Output, ElementRef, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Directive({
   selector: '[appScrollSpy]'
@@ -8,11 +9,14 @@ export class ScrollSpyDirective {
   @Output() public sectionChange = new EventEmitter<string>();
   private currentSection: string;
 
-  constructor(private el: ElementRef) {
+  constructor(
+    private el: ElementRef,
+    private router: Router
+    ) {
   }
 
   @HostListener('window:scroll', ['$event'])
-  onScroll(event: Event) {
+  onScroll(event: any) {
     console.log('event', event);
     let currentSection: string;
     const children = this.el.nativeElement.children;
@@ -35,6 +39,8 @@ export class ScrollSpyDirective {
     if (currentSection !== this.currentSection) {
       this.currentSection = currentSection;
       console.log('currentSection', currentSection);
+      // this.router.onSameUrlNavigation = 'ignore';
+      // this.router.navigate([], {fragment: currentSection, });
       this.sectionChange.emit(this.currentSection);
     }
   }

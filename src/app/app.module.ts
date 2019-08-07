@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroComponent } from './hero/hero.component';
 import { ScrollSpyDirective } from './scroll-spy.directive';
+import { SubzeroComponent } from './subzero/subzero.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroComponent,
-    ScrollSpyDirective
+    ScrollSpyDirective,
+    SubzeroComponent
   ],
   imports: [
     BrowserModule,
